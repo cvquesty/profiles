@@ -2,8 +2,10 @@
 #
 class profiles::development_puppetlabs_vm {
 
+$webport = hiera('webport')
+
   apache::vhost { 'development.puppetlabs.vm':
-    port    => '80',
+    port    => $webport,
     docroot => '/var/www/html/development_puppetlabs_vm',
   }
 
