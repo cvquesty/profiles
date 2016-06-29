@@ -2,7 +2,7 @@
 #
 class profiles::php {
 
-  class { 'php': }
+  class { '::php': }
 
   php::module { 'mysql': }
 
