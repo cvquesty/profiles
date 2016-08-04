@@ -2,4 +2,9 @@
 #
 class profiles::passenger {
   class { '::passenger': }
+
+  package { 'rubygems':
+    ensure => 'installed',
+  }
+
 }
