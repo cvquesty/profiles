@@ -18,10 +18,6 @@ class profiles::passenger {
     ensure => 'installed',
   }
 
-  package { 'zlib-devel':
-    ensure => 'installed',
-  }
-
   class { '::passenger':
     require => Package['rubygems'],
   }
