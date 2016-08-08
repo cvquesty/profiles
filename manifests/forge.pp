@@ -54,5 +54,6 @@ class profiles::forge {
     group   => 'apache',
     mode    => '0644',
     require => File['/opt/forge'],
+    notify  => Service['httpd'],
   }
 }
