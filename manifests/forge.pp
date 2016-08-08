@@ -14,6 +14,7 @@ class profiles::forge {
 
   file { '/opt/forge':
     require => Class['::apache'],
+    recurse => true,
   }
 
   file { '/opt/forge/log':
