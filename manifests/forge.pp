@@ -20,10 +20,6 @@ class profiles::forge {
     require => [File['/opt/forge'], Class['::apache'],],
   }
 
-  file { '/opt/forge/cache':
-    require => [File['/opt/forge'], Class['::apache'],],
-  }
-
   file { '/opt/forge/public':
     require => [File['/opt/forge'], Class['::apache'],],
   }
