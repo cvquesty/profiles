@@ -17,19 +17,19 @@ class profiles::forge {
   }
 
   file { '/opt/forge/log':
-    require => Class['::apache'],
+    require => [File['/opt/forge'], Class['::apache'],],
   }
 
   file { '/opt/forge/cache':
-    require => Class['::apache'],
+    require => [File['/opt/forge'], Class['::apache'],],
   }
 
   file { '/opt/forge/modules':
-    require => Class['::apache'],
+    require => [File['/opt/forge'], Class['::apache'],],
   }
 
   file { '/opt/forge/public':
-    require => Class['::apache'],
+    require => [File['/opt/forge'], Class['::apache'],],
   }
 
   # Main Application config file
