@@ -24,6 +24,15 @@ class profiles::forge {
     require => [File['/opt/forge'], Class['::apache'],],
   }
 
+  # Make sure the proper dependencies exist
+  package { 'ruby-devel':
+    ensure => 'present',
+  }
+
+  package { 'rubygems-devel':
+    ensure => 'present',
+  }
+
   # Main Application config file
   class { '::forge_server':
     cache_basedir    => '/opt/forge/cache',
