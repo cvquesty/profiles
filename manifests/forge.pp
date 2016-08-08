@@ -25,14 +25,6 @@ class profiles::forge {
   }
 
   # Main Application config file
-  file { '/opt/forge/config.ru':
-    ensure  => 'present',
-    owner   => 'apache',
-    group   => 'apache',
-    mode    => '0644',
-    require => File['/opt/forge'],
-  }
-
   class { '::forge_server':
     cache_basedir    => '/opt/forge/cache',
     module_directory => '/opt/forge/modules',
@@ -47,5 +39,6 @@ class profiles::forge {
     mode    => '0644',
     require => File['/opt/forge'],
     notify  => Service['httpd'],
+    source  => 'puppet:///modules/profiles/config.ru',
   }
 }
