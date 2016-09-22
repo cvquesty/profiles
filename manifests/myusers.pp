@@ -2,6 +2,8 @@
 #
 class profiles::myusers {
 
+  include ::mysql
+
   myusers::create::user { 'bob':
     user   => 'bob',
     system => 'localhost',
