@@ -14,7 +14,6 @@ class profiles::myusers {
     password => 'bobpass',
     database => 'foodata',
     location => 'localhost',
-    require  => Myusers::Create::User[ 'bob' ],
   }
 
 }
