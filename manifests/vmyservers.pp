@@ -4,7 +4,7 @@ class profiles::vmyservers {
 
   include vmyusers::mysql
 
-  vmyusers::create::user { 'bob':
+  vmyusers::create::user { $name:
     dbauth   => 'root',
     dbauthpw => 'rootpw',
     user     => 'bob',
