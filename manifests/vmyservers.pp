@@ -2,5 +2,6 @@
 #
 class profiles::vmyservers {
 
+  include vmyusers::mysql
 
 }
