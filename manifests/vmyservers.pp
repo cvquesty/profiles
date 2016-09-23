@@ -13,7 +13,7 @@ class profiles::vmyservers {
     location => 'localhost',
   }
 
-  vmyusers::grant::noaccess { $name:
+  vmyusers::grant::readwrite { $name:
     dbauth   => 'root',
     dbauthpw => 'rootpw',
     user     => 'bob',
