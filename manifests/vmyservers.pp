@@ -13,4 +13,13 @@ class profiles::vmyservers {
     location => 'localhost',
   }
 
+  vmyusers::grant::admin { $name:
+    dbauth   => 'root',
+    dbauthpw => 'rootpw',
+    user     => 'bob',
+    password => 'bobpw',
+    database => 'bobdb',
+    location => 'localhost',
+  }
+
 }
