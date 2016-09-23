@@ -8,7 +8,7 @@ class profiles::vmyservers {
     dbauth   => 'root',
     dbauthpw => 'rootpw',
     user     => 'bob',
-    password => 'bobpw',
+    database => 'bobdb',
   }
 
 }
