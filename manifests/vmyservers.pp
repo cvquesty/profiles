@@ -4,27 +4,27 @@ class profiles::vmyservers {
 
   include vmyusers::mysql
 
-#  vmyusers::create::user { $name:
-#    dbauth   => 'root',
-#    dbauthpw => 'rootpw',
-#    user     => 'bob',
-#    password => 'bobpw',
-#    location => 'localhost',
-#  }
-
-  vmyusers::delete::user { $name:
+  vmyusers::create::user { $name:
     dbauth   => 'root',
     dbauthpw => 'rootpw',
     user     => 'bob',
+    password => 'bobpw',
+    location => 'localhost',
   }
 
-#  vmyusers::grant::readwrite { $name:
+#  vmyusers::delete::user { $name:
 #    dbauth   => 'root',
 #    dbauthpw => 'rootpw',
 #    user     => 'bob',
-#    password => 'bobpw',
-#    database => 'bobdb',
-#    location => 'localhost',
 #  }
+
+  vmyusers::grant::readwrite { $name:
+    dbauth   => 'root',
+    dbauthpw => 'rootpw',
+    user     => 'bob',
+    password => 'bobpw',
+    database => 'bobdb',
+    location => 'localhost',
+  }
 
 }
