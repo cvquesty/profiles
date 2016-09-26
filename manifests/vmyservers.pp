@@ -13,7 +13,9 @@ class profiles::vmyservers {
 #  }
 
   vmyusers::delete::user { $name:
-    user => 'bob',
+    dbauth   => 'root',
+    dbauthpw => 'rootpw',
+    user     => 'bob',
   }
 
 #  vmyusers::grant::readwrite { $name:
