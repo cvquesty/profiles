@@ -12,7 +12,7 @@ class profiles::vmyservers {
     location => 'localhost',
   }
 
-  vmyusers::grant::readonly { $name:
+  vmyusers::grant::admin { $name:
     dbauth   => 'root',
     dbauthpw => 'rootpw',
     user     => 'bob',
