@@ -9,7 +9,6 @@ class profiles::vmyservers {
     dbauthpw => 'rootpw',
     user     => 'bob',
     password => 'bobpw',
-    database => 'bobdb',
     location => 'localhost',
   }
 
