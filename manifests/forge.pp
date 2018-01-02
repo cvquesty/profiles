@@ -40,9 +40,9 @@ class profiles::forge {
     module_directory => '/opt/forge/modules',
     proxy            => 'https://forgeapi.puppetlabs.com',
     service_ensure   => 'stopped',
-  } ->
+  }
 
-  file { '/opt/forge/config.ru':
+  -> file { '/opt/forge/config.ru':
     ensure  => 'present',
     owner   => 'apache',
     group   => 'apache',
