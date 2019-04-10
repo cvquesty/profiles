@@ -7,7 +7,6 @@ class profiles::ssh {
   class { 'ssh':
     storeconfigs_enabled => false,
     server_options       => $options,
-    port                 => $sshport,
   }
 
 }
