@@ -5,7 +5,7 @@ class profiles::logrotate {
     ensure => 'latest',
     config => {
       compress     => true,
-      rotate       => '10',
+      rotate       => 10,
       rotate_every => 'day',
       ifempty      => true,
     }
