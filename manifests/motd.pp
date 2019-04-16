@@ -1,8 +1,10 @@
 # Profile to set MOTD content
 class profiles::motd {
 
+  $motd_message = lookup('profiles::motd::message')
+
   class { 'motd':
-    content => 'Welcome to Questy.org',
+    content => $motd_message,
   }
 
 }
