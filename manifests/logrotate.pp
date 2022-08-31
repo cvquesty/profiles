@@ -6,7 +6,7 @@ class profiles::logrotate {
       compress     => true,
       rotate       => 10,
       rotate_every => 'day',
-      ifempty      => tue,
+      ifempty      => true,
     }
   }
 }
