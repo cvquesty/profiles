@@ -1,6 +1,5 @@
-# This profile is for running logrotate
+# This profile configures logrotate
 class profiles::logrotate {
-
   class { 'logrotate':
     ensure => 'latest',
     config => {
@@ -10,5 +9,4 @@ class profiles::logrotate {
       ifempty      => true,
     }
   }
-
 }

@@ -9,7 +9,7 @@ class profiles::rsyslog {
     path         => '/var/log/messages',
     rotate       => 10,
     rotate_every => 'day',
-    postrotate   => '/sbin/service rsyslog reload',
+    postrotate   => 'systemctl restart rsyslog',
     require      => Class['profiles::logrotate'],
   }
 }
