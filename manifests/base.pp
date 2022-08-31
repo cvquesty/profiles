@@ -2,5 +2,9 @@
 class profiles::base {
 
   include profiles::ntp
+  include profiles::ssh
+  include profiles::motd
+  include profiles::logrotate
+  include profiles::rsyslog
 
 }
