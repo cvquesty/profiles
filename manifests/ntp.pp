@@ -1,10 +1,10 @@
 # Profile to configure NTP
-class profiles::ntp {
-
-  $ntp_servers = lookup('profiles::ntp::servers')
+class profiles::ntp (
+  String $servers,
+){
 
   class { 'ntp':
-    servers => $ntp_servers,
+    servers => $servers,
   }
 
 }
