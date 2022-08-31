@@ -1,6 +1,6 @@
 # Profile to configure NTP
 class profiles::ntp (
-  String $servers,
+  Array $servers,
 ){
 
   class { 'ntp':
