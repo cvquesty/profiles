@@ -1,13 +1,8 @@
 # Profile to configure RSyslog
 class profiles::rsyslog {
 
-  # Rsyslog
-  class { 'rsyslog::config':
-    main_queue_opts => {
-      queue.maxdiskspace     => '1000G',
-      queue.dequeuebatchsize => 1000,
-    }
-  }
+  # RSyslog
+  include rsyslog
 
   # Set logrotate rule for Syslog
   logrotate::rule { 'messages':
