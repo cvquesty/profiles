@@ -5,6 +5,5 @@ class profiles::base {
   include profiles::ssh
   include profiles::motd
   include profiles::logrotate
-  include profiles::rsyslog
 
 }
