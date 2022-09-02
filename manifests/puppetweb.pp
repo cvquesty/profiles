@@ -1,6 +1,8 @@
 # Profile to configure Puppet Website for questy.org
 class profiles::puppetweb {
 
+  include apache
+
   apache::vhosts { 'puppet.questy.org':
     port    => 80,
     docroot => '/var/www/html/puppetweb',
