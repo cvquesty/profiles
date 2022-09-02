@@ -11,7 +11,7 @@ class profiles::puppetboard {
 
   class { 'puppetboard::apache::vhost':
     vhost_name => 'puppetboard.questy.org',
-    port       => '80',
+    port       => 80,
   }
 
 }
