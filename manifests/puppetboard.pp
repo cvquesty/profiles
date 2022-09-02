@@ -5,7 +5,7 @@ class profiles::puppetboard {
 
   class { 'puppetboard':
     python_version    => '3.6',
-    reports_count     => '50',
+    reports_count     => 50,
     manage_virtualenv => true,
   }
 
