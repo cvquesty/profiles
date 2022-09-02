@@ -1,7 +1,7 @@
 # Profile to configure RSyslog
 class profiles::rsyslog {
   # Configure the RSyslog Daemon
-  class { 'rsyslog': }
+  include rsyslog::config
 
   # Set logrotate rule for Syslog
   logrotate::rule { 'messages':
