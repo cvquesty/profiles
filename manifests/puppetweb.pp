@@ -3,7 +3,7 @@ class profiles::puppetweb {
 
   include apache
 
-  apache::vhosts { 'puppet.questy.org':
+  apache::vhost { 'puppet.questy.org':
     port    => 80,
     docroot => '/var/www/html/puppetweb',
     logroot => '/var/log/apache2/puppetweb',
