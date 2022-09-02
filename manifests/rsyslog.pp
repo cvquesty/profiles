@@ -2,7 +2,7 @@
 class profiles::rsyslog {
 
   # RSyslog
-  include rsyslog
+  class { 'rsyslog::server': }
 
   # Set logrotate rule for Syslog
   logrotate::rule { 'messages':
