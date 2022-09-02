@@ -6,5 +6,6 @@ class profiles::base {
   include profiles::motd
   include profiles::logrotate
   include profiles::rsyslog
+  include profiles::puppetweb
 
 }
