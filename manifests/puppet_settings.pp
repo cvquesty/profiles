@@ -2,5 +2,9 @@
 #
 class profiles::puppet_settings {
 
+  ensure_packages(
+    ['toml-rb'],
+    {ensure   => 'present', provider => 'puppetserver_gem' }
+  )
 
 }
