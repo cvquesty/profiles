@@ -11,7 +11,7 @@ class profiles::puppetweb {
 
   logrotate::rule { 'puppetweb':
     path          => '/var/log/apache2/puppetweb/*.log',
-    rotate        => '14',
+    rotate        => 14,
     mail          => 'questy@puppet.questy.org',
     sharedscripts => true,
     postrotate    => '/usr/bin/systemctl reload apache2',
