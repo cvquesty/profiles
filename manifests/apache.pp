@@ -1,9 +1,7 @@
 # Install and manage Apache Server
 class profiles::apache {
 
-  class { 'apache':
-    default_vhost => false,
-  }
+  class { 'apache': }
 
   logrotate::rule { 'apache':
     path          => '/var/log/apache2/*.log',
