@@ -1,6 +1,6 @@
 ---
 profiles::activeperl::aperl_version: '5.20.1.2000'
-profiles::activeperl::aperl_file: "ActivePerl-%{lookup('profiles::aperl_version')}-x86_64-linux-glibc-2.15-298557.tar.gz"
+profiles::activeperl::aperl_file: "ActivePerl-%{lookup('profiles::activeperl::aperl_version')}-x86_64-linux-glibc-2.15-298557.tar.gz"
 profiles::activeperl::packages:
 - 'libXft'
 - 'libXScrnSaver'
