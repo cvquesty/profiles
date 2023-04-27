@@ -19,7 +19,7 @@ class profiles::activeperl (
 
   # Stage the Installer
   staging::file { $aperl_file:
-    source => "http://downlaods.activestate.com/ActivePerl/releases/${aperl_version}/${aperl_file}",
+    source => "http://downloads.activestate.com/ActivePerl/releases/${aperl_version}/${aperl_file}",
   }
 
   # Extract the Installer
