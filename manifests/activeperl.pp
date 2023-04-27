@@ -26,6 +26,7 @@ class profiles::activeperl (
   staging::extract { $aperl_file:
     target  => '/usr/local/src',
     creates => "/usr/local/src/${aperl_file}",
+    require => Staging::File[ $aperl_file ],
   }
 
 }
