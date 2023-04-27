@@ -12,7 +12,7 @@ class profiles::activeperl (
 
   # Create Staging Directory
   class { 'staging':
-    path  => '/usr/local/src/',
+    path  => '/usr/local/src',
     owner => 'puppet',
     group => 'puppet',
   }
